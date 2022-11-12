@@ -1,9 +1,42 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>character-detail</ion-title>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start" defaultHref="/tabs/(films:films)">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{ character?.name }}</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="unfavoriteFilm()" *ngIf="isFavorite">
+        <ion-icon name="star" slot="icon-only" color="secondary"></ion-icon>
+      </ion-button>
+      <ion-button (click)="favoriteFilm()" *ngIf="!isFavorite">
+        <ion-icon name="star-outline" slot="icon-only" color="secondary"></ion-icon>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content padding="">
+
+  <ion-card *ngIf="character" class="movie-card">
+    <ion-card-header>Name: {{ character?.name }}</ion-card-header>
+    <ion-card-content>
+      Nickname: {{ character?.nickname }}
+    </ion-card-content>
+
+    <ion-item class="movie-info" lines="none">
+      <ion-icon name="film" slot="start"></ion-icon>
+      Status: {{ character?.status }}
+    </ion-item>
+
+    <ion-item class="movie-info" lines="none">
+      <ion-icon name="calendar" slot="start"></ion-icon>
+      Birthday: {{ character?.birthday }}
+    </ion-item>
+
+    <ion-item class="movie-info" lines="none" *ngFor="let occup of character?.occupation; let i = index">
+      <ion-icon name="calendar" slot="start"></ion-icon>
+      Ocupation: {{ occup }}
+    </ion-item>
+  </ion-card>
 
 </ion-content>

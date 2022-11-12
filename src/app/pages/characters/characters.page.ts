@@ -16,13 +16,13 @@ export class CharactersPage implements OnInit {
   ngOnInit() {
     this.characters = this.api.getCharacters();
     this.characters.forEach((item) => {
-      console.log(item);
+      console.log('Whole data: ', item);
     });
   }
 
   openDetails(character) {
-    let split = character.url.split('/');
-    let characterId = split[split.length - 2];
-    this.router.navigateByUrl(`/tabs/films/${characterId}`);
+    let characterId = character.char_id;
+    console.log('Characther ID: ', characterId);
+    this.router.navigateByUrl(`/tabs/characters/${characterId}`);
   }
 }
