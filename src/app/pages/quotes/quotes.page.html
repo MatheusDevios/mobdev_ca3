@@ -6,7 +6,7 @@
 
 <ion-content>
   <ion-list>
-    <ion-item button detail lines="@inset" *ngFor="let quote of (quotes | async)">
-      {{ quote.quote }}</ion-item>
+    <ion-item *ngFor="let quote of (quotes | async)">
+      {{quote.author}} once quote: "{{ quote.quote }}" during {{quote.series}}.</ion-item>
   </ion-list>
 </ion-content>

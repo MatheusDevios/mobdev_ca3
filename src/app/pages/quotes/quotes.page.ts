@@ -19,10 +19,4 @@ export class QuotesPage implements OnInit {
     //   console.log('Whole Quotes data: ', item);
     // });
   }
-
-  // openDetails(quote) {
-  // let deathParam = death.episode_id;
-  // // console.log('Episodes ID: ', episodesID);
-  // this.router.navigateByUrl(`/tabs/deaths/${deathParam}`);
-  // }
 }

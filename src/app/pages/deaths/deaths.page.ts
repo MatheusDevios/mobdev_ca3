@@ -19,10 +19,4 @@ export class DeathsPage implements OnInit {
     //   console.log('Whole Deaths data: ', item);
     // });
   }
-
-  // openDetails(death) {
-  // let deathParam = death.episode_id;
-  // // console.log('Episodes ID: ', episodesID);
-  // this.router.navigateByUrl(`/tabs/deaths/${deathParam}`);
-  // }
 }
