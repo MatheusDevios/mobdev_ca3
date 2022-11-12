@@ -25,7 +25,7 @@ export class EpisodeDetailsPage implements OnInit {
 
     this.api.getEpisode(this.episodeID).subscribe((res) => {
       this.episode = res[0];
-      // console.log("Episode: ",this.episode);
+      // console.log('Episode: ', this.episode);
     });
 
     this.favouriteService.isFavouriteEpisodes(this.episodeID).then((isFav) => {

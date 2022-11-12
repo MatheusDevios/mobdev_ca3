@@ -17,24 +17,30 @@
 
 <ion-content padding="">
 
-  <ion-card *ngIf="character" class="movie-card">
-    <ion-card-header>Name: {{ character?.name }}</ion-card-header>
-    <ion-card-content>
-      Nickname: {{ character?.nickname }}
-    </ion-card-content>
+  <ion-card *ngIf="character" class="char-card">
 
-    <ion-item class="movie-info" lines="none">
-      <ion-icon name="film" slot="start"></ion-icon>
+    <ion-item class="char-info" lines="none">
+      <ion-icon name="text" slot="start"></ion-icon>
+      Name: {{ character?.name }}
+    </ion-item>
+
+    <ion-item class="char-info" lines="none">
+      <ion-icon name="happy" slot="start"></ion-icon>
+      Nickname: {{ character?.nickname }}
+    </ion-item>
+
+    <ion-item class="char-info" lines="none">
+      <ion-icon name="pulse" slot="start"></ion-icon>
       Status: {{ character?.status }}
     </ion-item>
 
-    <ion-item class="movie-info" lines="none">
+    <ion-item class="char-info" lines="none">
       <ion-icon name="calendar" slot="start"></ion-icon>
       Birthday: {{ character?.birthday }}
     </ion-item>
 
-    <ion-item class="movie-info" lines="none" *ngFor="let occup of character?.occupation; let i = index">
-      <ion-icon name="calendar" slot="start"></ion-icon>
+    <ion-item class="char-info" lines="none" *ngFor="let occup of character?.occupation; let i = index">
+      <ion-icon name="briefcase" slot="start"></ion-icon>
       Ocupation: {{ occup }}
     </ion-item>
   </ion-card>

@@ -17,25 +17,31 @@
 
 <ion-content padding="">
 
-  <ion-card *ngIf="episode" class="movie-card">
-    <ion-card-header>Title: {{ episode?.title }}</ion-card-header>
-    <ion-card-content>
-      Episode Number: {{ episode?.episode }}
-    </ion-card-content>
+  <ion-card *ngIf="episode" class="episode-card">
 
-    <ion-item class="movie-info" lines="none">
-      <ion-icon name="film" slot="start"></ion-icon>
+    <ion-item class="episode-info" lines="none">
+      <ion-icon name="text" slot="start"></ion-icon>
+      Title: {{ episode?.title }}
+    </ion-item>
+
+    <ion-item class="episode-info" lines="none">
+      <ion-icon name="play" slot="start"></ion-icon>
+      Episode Number: {{ episode?.episode }}
+    </ion-item>
+
+    <ion-item class="episode-info" lines="none">
+      <ion-icon name="videocam" slot="start"></ion-icon>
       Season: {{ episode?.season }}
     </ion-item>
 
-    <ion-item class="movie-info" lines="none">
-      <ion-icon name="calendar" slot="start"></ion-icon>
+    <ion-item class="episode-info" lines="none">
+      <ion-icon name="film" slot="start"></ion-icon>
       Series: {{ episode?.series }}
     </ion-item>
 
-    <ion-item class="movie-info" lines="none" *ngFor="let character of character?.characters; let i = index">
-      <ion-icon name="calendar" slot="start"></ion-icon>
-      Ocupation: {{ character }}
+    <ion-item class="episode-info" lines="none" *ngFor="let char of episode?.characters; let i = index">
+      <ion-icon name="person" slot="start"></ion-icon>
+      Characters: {{ char }}
     </ion-item>
   </ion-card>
 
