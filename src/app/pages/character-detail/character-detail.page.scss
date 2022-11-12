@@ -1,7 +1,7 @@
 .char-card {
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 0.6rem;
-  background-color: #1919b4;
+  background-color: var(--ion-color-tertiary);
   padding: 0.2rem;
   //   width: max-content;
 }
