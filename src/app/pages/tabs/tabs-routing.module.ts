@@ -27,6 +27,45 @@ const routes: Routes = [
           },
         ],
       },
+      {
+        path: 'episodes',
+        children: [
+          {
+            path: '',
+            loadChildren: () =>
+              import('../episodes/episodes.module').then(
+                (m) => m.EpisodesPageModule
+              ),
+          },
+          {
+            path: ':id',
+            loadChildren: () =>
+              import('../episode-details/episode-details.module').then(
+                (m) => m.EpisodeDetailsPageModule
+              ),
+          },
+        ],
+      },
+      {
+        path: 'quotes',
+        children: [
+          {
+            path: '',
+            loadChildren: () =>
+              import('../quotes/quotes.module').then((m) => m.QuotesPageModule),
+          },
+        ],
+      },
+      {
+        path: 'deaths',
+        children: [
+          {
+            path: '',
+            loadChildren: () =>
+              import('../deaths/deaths.module').then((m) => m.DeathsPageModule),
+          },
+        ],
+      },
     ],
   },
   {

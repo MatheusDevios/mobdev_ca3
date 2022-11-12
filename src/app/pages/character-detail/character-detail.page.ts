@@ -21,7 +21,7 @@ export class CharacterDetailPage implements OnInit {
 
     this.api.getCharacter(this.characterID).subscribe((res) => {
       this.character = res[0];
-      console.log(this.character);
+      // console.log(this.character);
     });
   }
 }
