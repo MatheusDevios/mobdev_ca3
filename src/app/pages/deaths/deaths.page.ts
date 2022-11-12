@@ -15,14 +15,14 @@ export class DeathsPage implements OnInit {
 
   ngOnInit() {
     this.deaths = this.api.getDeaths();
-    this.deaths.forEach((item) => {
-      console.log('Whole Deaths data: ', item);
-    });
+    // this.deaths.forEach((item) => {
+    //   console.log('Whole Deaths data: ', item);
+    // });
   }
 
-  openDetails(death) {
-    // let deathParam = death.episode_id;
-    // // console.log('Episodes ID: ', episodesID);
-    // this.router.navigateByUrl(`/tabs/deaths/${deathParam}`);
-  }
+  // openDetails(death) {
+  // let deathParam = death.episode_id;
+  // // console.log('Episodes ID: ', episodesID);
+  // this.router.navigateByUrl(`/tabs/deaths/${deathParam}`);
+  // }
 }

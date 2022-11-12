@@ -15,14 +15,14 @@ export class QuotesPage implements OnInit {
 
   ngOnInit() {
     this.quotes = this.api.getQuotes();
-    this.quotes.forEach((item) => {
-      console.log('Whole Quotes data: ', item);
-    });
+    // this.quotes.forEach((item) => {
+    //   console.log('Whole Quotes data: ', item);
+    // });
   }
 
-  openDetails(quote) {
-    // let deathParam = death.episode_id;
-    // // console.log('Episodes ID: ', episodesID);
-    // this.router.navigateByUrl(`/tabs/deaths/${deathParam}`);
-  }
+  // openDetails(quote) {
+  // let deathParam = death.episode_id;
+  // // console.log('Episodes ID: ', episodesID);
+  // this.router.navigateByUrl(`/tabs/deaths/${deathParam}`);
+  // }
 }

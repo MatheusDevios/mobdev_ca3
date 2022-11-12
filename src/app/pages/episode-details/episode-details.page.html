@@ -1,14 +1,14 @@
 <ion-header>
   <ion-toolbar color="primary">
-    <ion-buttons slot="start" defaultHref="/tabs/(films:films)">
+    <ion-buttons slot="start" defaultHref="/tabs/(episodes:episodes)">
       <ion-back-button></ion-back-button>
     </ion-buttons>
     <ion-title>{{ episode?.title }}</ion-title>
     <ion-buttons slot="end">
-      <ion-button (click)="unfavoriteFilm()" *ngIf="isFavorite">
+      <ion-button (click)="unfavouriteFilm()" *ngIf="isFavourite">
         <ion-icon name="star" slot="icon-only" color="secondary"></ion-icon>
       </ion-button>
-      <ion-button (click)="favoriteFilm()" *ngIf="!isFavorite">
+      <ion-button (click)="favouriteFilm()" *ngIf="!isFavourite">
         <ion-icon name="star-outline" slot="icon-only" color="secondary"></ion-icon>
       </ion-button>
     </ion-buttons>
