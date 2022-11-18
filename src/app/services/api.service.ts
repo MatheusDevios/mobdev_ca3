@@ -30,6 +30,10 @@ export class ApiService {
   }
 
   getDeaths() {
+    // EXPLANATION NOTE:
+    // There is no need to request death by id or by name, because the death endpoint already returns the information needed about ...
+    // who killed each specific character. So there is no need to do more work to get the same result, leading our application to be faster ...
+    // because we don't need to consume more data from the server than it's being requested so far.
     return this.http.get(`${this.baseUrl}deaths`);
   }
 }
